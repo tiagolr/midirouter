@@ -1,5 +1,4 @@
 import time
-import code
 from rtmidi import midiutil
 
 midiin = midiutil.open_midiinput('nano')
@@ -12,7 +11,7 @@ GLOBAL_CHAN = 0
 KEY_CYCLE = 46
 KEY_PREV = 58
 KEY_NEXT = 59
-KEYS_GLOBAL = [60, 61, 62, 43, 44, 42, 41, 45]
+KEYS_GLOBAL = [60, 61, 62, 43, 44, 42, 41, 45] # transport buttons
 KEYS_ARM = [48, 49, 50, 51, 52, 53, 54, 55, # 0-7 channels mute buttons
             64, 65, 66, 67, 68, 69, 70, 71, # 8-15 channels arm buttons
             ]
@@ -79,11 +78,6 @@ def shutdown():
     del midiin
     del midiout
     del cableout
-
-# paint_leds()
-# import code
-# code.InteractiveConsole(locals=globals()).interact()
-# shutdown()
 
 try:
     while True:
