@@ -15,7 +15,7 @@ KEYS_GLOBAL = [60, 61, 62, 43, 44, 42, 41, 45] # transport buttons
 KEYS_ARM = [48, 49, 50, 51, 52, 53, 54, 55, # 0-7 channels mute buttons
             64, 65, 66, 67, 68, 69, 70, 71, # 8-15 channels arm buttons
             ]
-channel = 0
+channel = 8 # 0 == mixer1, 8 == user1
 isCycling = False
 
 def onmidi(event, data=None):
